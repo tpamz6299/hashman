@@ -5,41 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hangman</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 50px;
-      background-color: #f4f4f4;
-    }
-    h1 {
-      margin-bottom: 20px;
-    }
-    #word {
-      font-size: 2em;
-      letter-spacing: 10px;
-    }
-    #wrong-guesses {
-      margin-top: 20px;
-      color: red;
-      font-weight: bold;
-    }
-    #letters {
-      margin-top: 30px;
-    }
-    button {
-      margin: 5px;
-      padding: 10px;
-      font-size: 1em;
-      cursor: pointer;
-    }
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+    #word { font-size: 2em; letter-spacing: 10px; }
+    #wrong-guesses { color: red; margin-top: 10px; }
+    #letters button { margin: 3px; padding: 10px; font-size: 1em; }
+    canvas { margin-top: 20px; border: 1px solid #ccc; }
   </style>
 </head>
 <body>
   <h1>Hangman</h1>
-
-  <div id="word">_ _ _ _ _</div>
-  <div id="wrong-guesses">Wrong guesses: </div>
-
+  <div id="word"></div>
+  <p id="wrong-guesses"></p>
+  <canvas id="hangmanCanvas" width="200" height="200"></canvas>
   <div id="letters"></div>
 
   <script src="script.js"></script>
