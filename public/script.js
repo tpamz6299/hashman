@@ -1,12 +1,13 @@
+// Simple hangman logic
 const words = ["telegram", "hangman", "javascript", "multiplayer"];
 let word = words[Math.floor(Math.random() * words.length)];
 let guessed = Array(word.length).fill("_");
 let wrong = [];
 
-document.getElementById("game").innerHTML = `
-  <p>${guessed.join(" ")}</p>
-  <p>Wrong guesses: ${wrong.join(", ")}</p>
-`;
+function render() {
+  document.getElementById("game").innerText = guessed.join(" ");
+  document.getElementById("wrong").innerText = "Wrong guesses: " + wrong.join(", ");
+}
 
 document.addEventListener("keydown", e => {
   const letter = e.key.toLowerCase();
@@ -19,9 +20,7 @@ document.addEventListener("keydown", e => {
   } else if (!wrong.includes(letter)) {
     wrong.push(letter);
   }
-
-  document.getElementById("game").innerHTML = `
-    <p>${guessed.join(" ")}</p>
-    <p>Wrong guesses: ${wrong.join(", ")}</p>
-  `;
+  render();
 });
+
+render();
