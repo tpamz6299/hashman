@@ -3,22 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hangman</title>
+  <title>Hangman Multiplayer</title>
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 30px; }
     #word { font-size: 2em; letter-spacing: 10px; }
-    #wrong-guesses { color: red; margin-top: 10px; }
-    #letters button { margin: 3px; padding: 10px; font-size: 1em; }
+    #wrong-guesses { color: red; margin: 10px; }
+    #letters button { margin: 3px; padding: 8px; font-size: 1em; }
     canvas { margin-top: 20px; border: 1px solid #ccc; }
   </style>
 </head>
 <body>
-  <h1>Hangman</h1>
+  <h1>Hangman Multiplayer</h1>
   <div id="word"></div>
   <p id="wrong-guesses"></p>
   <canvas id="hangmanCanvas" width="200" height="200"></canvas>
   <div id="letters"></div>
 
+  <!-- Load Socket.io -->
+  <script src="/socket.io/socket.io.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
